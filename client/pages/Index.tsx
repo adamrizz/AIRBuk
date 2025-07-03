@@ -210,14 +210,20 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-[500px]">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+                  style={{ margin: "-3px 27px 0 33px" }}
+                >
                   Jelajahi Dunia Lewat
                   <br />
                   Buku, Mulai dari
                   <br />
                   <span className="text-foreground">AllBook</span>
                 </h1>
-                <p className="text-lg text-muted-foreground max-w-md">
+                <p
+                  className="text-lg text-muted-foreground max-w-md"
+                  style={{ margin: "16px 0 0 34px" }}
+                >
                   Nikmati kemudahan membeli buku kapan saja dan di mana saja,
                   hanya dengan beberapa klik.
                 </p>
@@ -228,6 +234,7 @@ export default function Index() {
                 src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F16232a4b310c4e859ce7f6c01ff260e6?format=webp&width=800"
                 alt="Person reading book illustration"
                 className="w-auto flex-grow"
+                style={{ margin: "-34px 0 0 -86px" }}
               />
             </div>
           </div>
@@ -247,50 +254,76 @@ export default function Index() {
             <div className="grid grid-cols-2 gap-4">
               {/* Top row books */}
               <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
                     alt="Kamu gak sendiri book cover"
-                    className="w-full h-full object-cover"
+                    className="object-cover"
+                    style={{
+                      height: "70%",
+                      width: "70%",
+                      margin: "97px 15px 0 auto",
+                    }}
                   />
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                     alt="Laut Bercerita book cover"
-                    className="w-full h-full object-cover"
+                    className="object-cover"
+                    style={{
+                      height: "70%",
+                      width: "70%",
+                      margin: "97px auto 0 13px",
+                    }}
                   />
                 </div>
               </div>
 
               {/* Bottom row books */}
               <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
                     alt="Sapiens Grafis vol.2 book cover"
-                    className="w-full h-full object-cover"
+                    className="object-cover"
+                    style={{
+                      height: "70%",
+                      width: "70%",
+                      margin: "0 13px 0 auto",
+                    }}
                   />
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
                     alt="Start With Why book cover"
-                    className="w-full h-full object-cover"
+                    className="object-cover"
+                    style={{
+                      height: "70%",
+                      width: "70%",
+                      margin: "0 auto 0 15px",
+                    }}
                   />
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <div className="flex flex-col">
+              <h2
+                className="text-3xl md:text-4xl font-bold text-foreground"
+                style={{ margin: "-166px 0 -8px -6px" }}
+              >
                 Temukan Buku Favoritmu Disini
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p
+                className="text-muted-foreground leading-relaxed self-center"
+                style={{ margin: "21px 17px -28px -2px" }}
+              >
                 Dengan buku fisik, Anda dapat merasakan pengalaman membaca yang
                 lebih nyata dan mendalam. Nikmati aroma khas kertas, sensasi
                 membalik halaman, dan fokus penuh tanpa gangguan layar. Bawa
@@ -303,7 +336,7 @@ export default function Index() {
       </section>
 
       {/* Featured Books */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background flex flex-col justify-start items-start">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -330,7 +363,7 @@ export default function Index() {
                       <p className="text-muted-foreground text-sm mb-2">
                         {book.author}
                       </p>
-                      <div className="flex items-center mb-3">
+                      <div className="flex items-start justify-start mb-5">
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
@@ -368,7 +401,10 @@ export default function Index() {
           alt="Book Sale Now - Discover literary treasures at incredible prices"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0" />
+        <div
+          className="absolute"
+          style={{ left: "70px", top: "-1632px", right: "0px", bottom: "0px" }}
+        />
       </section>
 
       {/* Popular Books */}
