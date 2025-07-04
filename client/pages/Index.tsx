@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,6 +16,36 @@ import {
 } from "lucide-react";
 
 export default function Index() {
+  const [currentWeek, setCurrentWeek] = useState(1);
+  const [isBookSectionVisible, setIsBookSectionVisible] = useState(false);
+  const bookSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBookSectionVisible(true);
+        } else {
+          setIsBookSectionVisible(false);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+
+    if (bookSectionRef.current) {
+      observer.observe(bookSectionRef.current);
+    }
+
+    return () => {
+      if (bookSectionRef.current) {
+        observer.unobserve(bookSectionRef.current);
+      }
+    };
+  }, []);
+
   const featuredBooks = [
     {
       title: "The Silent Patient",
@@ -33,6 +64,73 @@ export default function Index() {
       cover: "/placeholder.svg",
       rating: 4.9,
       badge: "Popular",
+    },
+  ];
+
+  const weeklyPicks = [
+    {
+      week: 1,
+      books: [
+        {
+          title: "Beyblade X, Vol. 3",
+          author:
+            "Kawamoto, Homura (Author)\nMuno, Hikaru (Author)\nDemizu, Posuka (Illustrator)",
+          image:
+            "https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fa880b4ac73a147b396a0128f65ec77b6",
+        },
+        {
+          title:
+            "The Care and Keeping of You 1: The Body Book for Younger Girls",
+          author: "Schafer, Valorie (Penulis)\nNatterson, Cara (Kontributor)",
+          image:
+            "https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fe15b30a0ae8840e38c46244861e349c6",
+        },
+      ],
+    },
+    {
+      week: 2,
+      books: [
+        {
+          title: "The Art of Code",
+          author: "James Wilson",
+          image: "/placeholder.svg",
+        },
+        {
+          title: "Sustainable Living",
+          author: "Maria Garcia",
+          image: "/placeholder.svg",
+        },
+      ],
+    },
+    {
+      week: 3,
+      books: [
+        {
+          title: "Digital Marketing",
+          author: "Robert Kim",
+          image: "/placeholder.svg",
+        },
+        {
+          title: "Psychology Today",
+          author: "Jennifer Lee",
+          image: "/placeholder.svg",
+        },
+      ],
+    },
+    {
+      week: 4,
+      books: [
+        {
+          title: "Laut Bercerita",
+          author: "Leila C",
+          image: "/placeholder.svg",
+        },
+        {
+          title: "Animal Farm",
+          author: "Jennifer Lee",
+          image: "/placeholder.svg",
+        },
+      ],
     },
   ];
 
@@ -127,6 +225,10 @@ export default function Index() {
     { name: "Mizan", logo: "/placeholder.svg" },
     { name: "Erlangga", logo: "/placeholder.svg" },
     { name: "Bentang Pustaka", logo: "/placeholder.svg" },
+    { name: "Kompas", logo: "/placeholder.svg" },
+    { name: "Elex Media", logo: "/placeholder.svg" },
+    { name: "Gema Insani", logo: "/placeholder.svg" },
+    { name: "Alvabet", logo: "/placeholder.svg" },
   ];
 
   const faqs = [
@@ -154,11 +256,14 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                <span className="text-xs font-bold text-gray-600">A</span>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
+                <img
+                  src="/airbook_logo.png"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="text-lg font-medium text-foreground">
-                AllBook
+                AIRBook
               </span>
             </div>
 
@@ -167,31 +272,39 @@ export default function Index() {
                 href="#"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                Home
+                Halaman Utama
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Collection
+                Koleksi
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Contact Us
+                Hubungi Kami
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                About us
+                Tentang Kami
               </a>
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 text-gray-600" />
+              <div className="hidden md:flex items-center space-x-3">
+                <Button
+                  variant="outline"
+                  className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
+                >
+                  Masuk
+                </Button>
+                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
+                  Daftar
+                </Button>
               </div>
               <Button variant="ghost" size="icon">
                 <ShoppingCart className="h-5 w-5" />
@@ -205,36 +318,35 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-yellow-100 to-orange-200">
+      <section className="relative py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center min-h-[500px]">
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
-                  style={{ margin: "-3px 27px 0 33px" }}
-                >
-                  Jelajahi Dunia Lewat
-                  <br />
-                  Buku, Mulai dari
-                  <br />
-                  <span className="text-foreground">AllBook</span>
-                </h1>
-                <p
-                  className="text-lg text-muted-foreground max-w-md"
-                  style={{ margin: "16px 0 0 34px" }}
-                >
-                  Nikmati kemudahan membeli buku kapan saja dan di mana saja,
-                  hanya dengan beberapa klik.
-                </p>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Text Content - Adjusted for smaller size */}
+            <div className="space-y-6 text-center md:text-left md:pl-8">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-serif font-medium text-stone-800 leading-tight">
+                Jelajahi Dunia Lewat
+                <br />
+                Buku, Mulai dari
+                <br />
+                <span className="font-bold">AIRBook</span>
+              </h1>
+              <p className="text-lg text-stone-600 max-w-md mx-auto md:mx-0">
+                Nikmati kemudahan membeli buku kapan saja dan di mana saja,
+                hanya dengan beberapa klik.
+              </p>
+              <div className="pt-4">
+                <button className="bg-[#664229] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#664229]/90 transition-all duration-300 shadow-lg">
+                  Mulai Berbelanja
+                </button>
               </div>
             </div>
-            <div className="flex justify-center">
+
+            {/* Image Content - Using the illustration from your original code */}
+            <div className="flex justify-center items-center">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F16232a4b310c4e859ce7f6c01ff260e6?format=webp&width=800"
-                alt="Person reading book illustration"
-                className="w-auto flex-grow"
-                style={{ margin: "-34px 0 0 -86px" }}
+                alt="Ilustrasi seseorang sedang membaca buku di atas tumpukan buku besar"
+                className="w-full max-w-md lg:max-w-lg h-auto"
               />
             </div>
           </div>
@@ -248,81 +360,139 @@ export default function Index() {
       </section>
 
       {/* Book Showcase Section */}
-      <section className="py-16 bg-gray-50">
+      <section
+        ref={bookSectionRef}
+        className="py-16 bg-gray-50 overflow-hidden"
+      >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-4">
+            {/* Book Grid with Staggered Animation */}
+            <div
+              className={`grid grid-cols-2 gap-4 transition-all duration-1000 ease-out ${
+                isBookSectionVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-12"
+              }`}
+            >
               {/* Top row books */}
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "200ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 -rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
                     alt="Kamu gak sendiri book cover"
-                    className="object-cover"
-                    style={{
-                      height: "70%",
-                      width: "70%",
-                      margin: "97px 15px 0 auto",
-                    }}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "400ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                     alt="Laut Bercerita book cover"
-                    className="object-cover"
-                    style={{
-                      height: "70%",
-                      width: "70%",
-                      margin: "97px auto 0 13px",
-                    }}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
 
               {/* Bottom row books */}
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "600ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
                     alt="Sapiens Grafis vol.2 book cover"
-                    className="object-cover"
-                    style={{
-                      height: "70%",
-                      width: "70%",
-                      margin: "0 13px 0 auto",
-                    }}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg flex flex-col">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "800ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 -rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
                     alt="Start With Why book cover"
-                    className="object-cover"
-                    style={{
-                      height: "70%",
-                      width: "70%",
-                      margin: "0 auto 0 15px",
-                    }}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-col">
+            {/* Text Content with Animation */}
+            <div
+              className={`space-y-6 transition-all duration-1000 ease-out ${
+                isBookSectionVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-12"
+              }`}
+              style={{ transitionDelay: "300ms" }}
+            >
               <h2
-                className="text-3xl md:text-4xl font-bold text-foreground"
-                style={{ margin: "-166px 0 -8px -6px" }}
+                className={`text-3xl md:text-4xl font-bold text-foreground transition-all duration-800 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: "500ms" }}
               >
                 Temukan Buku Favoritmu Disini
               </h2>
               <p
-                className="text-muted-foreground leading-relaxed self-center"
-                style={{ margin: "21px 17px -28px -2px" }}
+                className={`text-muted-foreground leading-relaxed transition-all duration-800 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: "700ms" }}
               >
                 Dengan buku fisik, Anda dapat merasakan pengalaman membaca yang
                 lebih nyata dan mendalam. Nikmati aroma khas kertas, sensasi
@@ -335,65 +505,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Featured Books */}
-      <section className="py-16 bg-background flex flex-col justify-start items-start">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Temukan Buku Terpopuler Hari Ini
-            </h2>
-            <p className="text-muted-foreground">
-              Koleksi terpilih dari editor kami
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {featuredBooks.map((book, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="grid grid-cols-3 h-48">
-                  <div className="col-span-1 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <BookOpen className="h-12 w-12 text-gray-500" />
-                  </div>
-                  <div className="col-span-2 p-6 flex flex-col justify-between">
-                    <div>
-                      <Badge className="mb-2">{book.badge}</Badge>
-                      <h3 className="font-bold text-lg mb-1">{book.title}</h3>
-                      <p className="text-muted-foreground text-sm mb-2">
-                        {book.author}
-                      </p>
-                      <div className="flex items-start justify-start mb-5">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`h-4 w-4 ${i < Math.floor(book.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-                          />
-                        ))}
-                        <span className="ml-2 text-sm text-muted-foreground">
-                          {book.rating}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="font-bold text-lg text-primary">
-                          {book.price}
-                        </span>
-                        <span className="ml-2 text-sm text-muted-foreground line-through">
-                          {book.originalPrice}
-                        </span>
-                      </div>
-                      <Button size="sm">Beli</Button>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Sale Banner */}
       <section className="py-16 relative overflow-hidden">
         <img
@@ -401,10 +512,7 @@ export default function Index() {
           alt="Book Sale Now - Discover literary treasures at incredible prices"
           className="w-full h-full object-cover"
         />
-        <div
-          className="absolute"
-          style={{ left: "70px", top: "-1632px", right: "0px", bottom: "0px" }}
-        />
+        <div className="absolute inset-0" />
       </section>
 
       {/* Popular Books */}
@@ -412,9 +520,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
             {/* Glossy Gentleman Guide */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="flex items-center space-x-1 mt-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                     <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -449,9 +559,11 @@ export default function Index() {
             </div>
 
             {/* Start With Why */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
-                <div className="text-white text-center font-black text-2xl leading-none tracking-wider">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:bg-red-700">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="text-white text-center font-black text-2xl leading-none tracking-wider relative z-10 group-hover:scale-110 transition-transform duration-300">
                   <div className="mb-2">START</div>
                   <div className="mb-2">WITH</div>
                   <div>WHY</div>
@@ -466,9 +578,11 @@ export default function Index() {
             </div>
 
             {/* Sapiens Grafis vol.2 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200">
-                <div className="absolute inset-0 flex flex-col p-3">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200 group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-[#664229]/50">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                <div className="absolute inset-0 flex flex-col p-3 relative z-10">
                   <div className="text-center mb-3">
                     <div className="text-lg font-bold text-gray-800 mb-1">
                       Sapiens
@@ -505,9 +619,11 @@ export default function Index() {
             </div>
 
             {/* Laut Bercerita */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 p-3">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:from-sky-400 group-hover:via-blue-500 group-hover:to-blue-600">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 p-3 relative z-10">
                   {/* Ocean waves and maritime elements */}
                   <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-blue-200/40 to-transparent"></div>
                   <div className="absolute top-6 left-2 right-2 h-6 bg-blue-300/30 rounded-full"></div>
@@ -549,9 +665,11 @@ export default function Index() {
             </div>
 
             {/* Glossy Gentleman Guide (repeat) */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="flex items-center space-x-1 mt-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                     <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -601,14 +719,14 @@ export default function Index() {
             </div>
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                About Us
+                Tentang Kami
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Kami bukan sekadar toko buku online. Kami adalah komunitas
                 pembaca, penulis, dan pecinta literatur yang memiliki kesamaan
                 yang sama terhadap kekuatan dan keajaiban kata-kata. Didirikan
                 dengan visi untuk membuat buku lebih mudah diakses oleh semua
-                orang, AllBook dan kami berpacu menjadi wadah bagi para pembaca
+                orang, AirBook dan kami berpacu menjadi wadah bagi para pembaca
                 untuk menemukan serta menyesuaikan klasik- klasik terbebut.
                 Platform kami bertujuan untuk menghubungkan individu yang
                 memiliki semangat terhadap dunia sastra, mendorong diskusi,
@@ -617,8 +735,8 @@ export default function Index() {
                 menjelajahi keajaiban cerita, dan memperluas wawasan melalui
                 buku-buku yang tentara.
               </p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md">
-                Learn More
+              <Button className="bg-[#664229] hover:bg-[#664229]/90 text-white px-6 py-2 rounded-md">
+                Pelajari Lebih Lanjut
               </Button>
             </div>
           </div>
@@ -664,75 +782,150 @@ export default function Index() {
         </div>
       </section>
 
-      {/* AllBook's Picks */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              AllBook's Picks
+      {/* Featured Books */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl font-bold text-primary mb-4">
+              AIRBook's Picks
             </h2>
-            <p className="text-muted-foreground">
-              Rekomendasi khusus dari tim editor kami
+            <p className="text-xl text-muted-foreground">
+              Setiap minggu, kami memilih buku-buku terbaik untuk Anda
+              nikmati. Temukan pilihan kami minggu ini!
             </p>
           </div>
-          <div className="space-y-8">
-            {bookPicks.map((book, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="grid md:grid-cols-4 gap-6 p-6">
-                  <div className="md:col-span-1">
-                    <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center">
-                      <BookOpen className="h-12 w-12 text-gray-500" />
+
+          <div className="flex justify-center mb-8">
+            <div className="flex space-x-2 bg-muted rounded-lg p-1">
+              {weeklyPicks.map((week) => (
+                <button
+                  key={week.week}
+                  onClick={() => setCurrentWeek(week.week)}
+                  className={`px-6 py-2 rounded-md font-medium transition-colors ${
+                    currentWeek === week.week
+                      ? "bg-[#664229] text-white"
+                      : "text-muted-foreground hover:text-[#664229]"
+                  }`}
+                >
+                  WEEK {week.week}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {weeklyPicks
+              .find((w) => w.week === currentWeek)
+              ?.books.map((book, index) => (
+                <Card
+                  key={index}
+                  className="group cursor-pointer hover:shadow-lg transition-all duration-300"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex space-x-6">
+                      <div className="w-24 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-paper-100 to-cream-100 flex-shrink-0">
+                        <img
+                          src={book.image}
+                          alt={book.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-serif text-xl font-semibold text-primary mb-2 group-hover:text-sage-600 transition-colors">
+                          {book.title}
+                        </h3>
+                        <p className="text-muted-foreground mb-4">
+                          by {book.author}
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                          This week's carefully selected title offers readers an
+                          exceptional journey through compelling storytelling
+                          and profound insights.
+                        </p>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white"
+                        >
+                          Pelajari Lebih Lanjut
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                  <div className="md:col-span-3 space-y-4">
-                    <div>
-                      <Badge variant="secondary" className="mb-2">
-                        {book.category}
-                      </Badge>
-                      <h3 className="text-xl font-bold mb-1">{book.title}</h3>
-                      <p className="text-muted-foreground">{book.author}</p>
-                    </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {book.description}
-                    </p>
-                    <Button>Baca Selengkapnya</Button>
-                  </div>
-                </div>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </div>
       </section>
 
       {/* Media Partners */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Media Partner
+              Kerja Sama
             </h2>
             <p className="text-muted-foreground">
-              Dipercaya oleh penerbit terkemuka
+              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia maupun
+              mancanegara.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-6 bg-background rounded-lg hover:shadow-md transition-shadow"
-              >
-                <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center">
-                  <span className="text-xs text-gray-600 font-semibold">
-                    {partner.name}
-                  </span>
+
+          {/* Infinite Horizontal Scrolling Partners */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of partners */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
+                >
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
+                >
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                      {partner.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* CSS Keyframes for infinite scrolling */}
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 20s linear infinite;
+            width: calc(
+              200px * ${partners.length} * 2 + 32px * ${partners.length} * 2
+            );
+          }
+
+          .animate-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Features */}
@@ -808,123 +1001,94 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-16">
+      <footer className="bg-[#664229] text-stone-300 py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Column 1: Brand and Social Media */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <BookOpen className="h-8 w-8 text-primary" />
-                <span className="text-xl font-bold">AllBook</span>
+                <BookOpen className="h-8 w-8 text-white" />
+                <span className="text-xl font-bold text-white">AirBook</span>
               </div>
-              <p className="text-background/80 text-sm">
+              <p className="text-stone-300 text-sm">
                 Platform terpercaya untuk menemukan dan membeli buku berkualitas
                 dengan harga terjangkau.
               </p>
-              <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-background/10 rounded-full flex items-center justify-center">
-                  <span className="text-xs">f</span>
-                </div>
-                <div className="w-8 h-8 bg-background/10 rounded-full flex items-center justify-center">
-                  <span className="text-xs">t</span>
-                </div>
-                <div className="w-8 h-8 bg-background/10 rounded-full flex items-center justify-center">
-                  <span className="text-xs">i</span>
-                </div>
-              </div>
             </div>
+
+            {/* Column 2: Categories */}
             <div>
-              <h3 className="font-bold mb-4">Kategori</h3>
-              <ul className="space-y-2 text-sm text-background/80">
+              <h3 className="font-bold text-white mb-4">Kategori</h3>
+              <ul className="space-y-2 text-sm text-stone-300">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Fiksi
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Non-Fiksi
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Bisnis
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Teknologi
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Sejarah
                   </a>
                 </li>
               </ul>
             </div>
+
+            {/* Column 3: Services */}
             <div>
-              <h3 className="font-bold mb-4">Layanan</h3>
-              <ul className="space-y-2 text-sm text-background/80">
+              <h3 className="font-bold text-white mb-4">Layanan</h3>
+              <ul className="space-y-2 text-sm text-stone-300">
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Bantuan
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Pembayaran
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Pengiriman
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="hover:text-background transition-colors"
-                  >
+                  <a href="#" className="hover:text-white transition-colors">
                     Pengembalian
                   </a>
                 </li>
               </ul>
             </div>
+
+            {/* Column 4: Contact */}
             <div>
-              <h3 className="font-bold mb-4">Kontak</h3>
-              <ul className="space-y-2 text-sm text-background/80">
-                <li>Email: info@allbook.id</li>
+              <h3 className="font-bold text-white mb-4">Kontak</h3>
+              <ul className="space-y-2 text-sm text-stone-300">
+                <li>Email: info@airbook.id</li>
                 <li>Telepon: (021) 1234-5678</li>
                 <li>Alamat: Jakarta, Indonesia</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-background/20 mt-12 pt-8 text-center text-sm text-background/60">
-            <p>&copy; 2024 AllBook. All rights reserved.</p>
+          <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-stone-400">
+            <p>
+              &copy; {new Date().getFullYear()} AirBook. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
