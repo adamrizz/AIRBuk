@@ -587,21 +587,21 @@ export default function Index() {
             </div>
 
             {/* Book 4 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#E5D3B3]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                   alt="Laut Bercerita"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
-                <p className="text-sm font-bold text-[#664229]">Rp 85,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 85,000</p>
               </div>
             </div>
 
