@@ -258,7 +258,7 @@ export default function Index() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/airbook_logo.png"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Ff0809dd8a6564679b6f4a196ba66ad79"
                   className="w-full h-full object-cover"
                 />
               </div>
