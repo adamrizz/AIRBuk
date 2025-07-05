@@ -998,8 +998,8 @@ export default function Index() {
 
             {/* Column 4: Contact */}
             <div>
-              <h3 className="font-bold text-white mb-4">Kontak</h3>
-              <ul className="space-y-2 text-sm text-stone-300">
+              <h3 className="font-bold text-black mb-4">Kontak</h3>
+              <ul className="space-y-2 text-sm text-black">
                 <li>Email: info@airbook.id</li>
                 <li>Telepon: (021) 1234-5678</li>
                 <li>Alamat: Jakarta, Indonesia</li>
