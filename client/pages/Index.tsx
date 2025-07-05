@@ -971,25 +971,25 @@ export default function Index() {
 
             {/* Column 3: Services */}
             <div>
-              <h3 className="font-bold text-white mb-4">Layanan</h3>
-              <ul className="space-y-2 text-sm text-stone-300">
+              <h3 className="font-bold text-black mb-4">Layanan</h3>
+              <ul className="space-y-2 text-sm text-black">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-600 transition-colors">
                     Bantuan
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-600 transition-colors">
                     Pembayaran
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-600 transition-colors">
                     Pengiriman
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <a href="#" className="hover:text-gray-600 transition-colors">
                     Pengembalian
                   </a>
                 </li>
