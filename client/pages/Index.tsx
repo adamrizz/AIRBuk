@@ -620,11 +620,7 @@ export default function Index() {
                   Kamu Gak Sendiri
                 </h3>
                 <p className="text-xs text-gray-600">Syahid Muhammad</p>
-<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 75,000</p>
-=======
-                <p className="text-sm font-bold text-[#000000]">Rp 75,000</p>
->>>>>>> origin/main
               </div>
             </div>
           </div>
