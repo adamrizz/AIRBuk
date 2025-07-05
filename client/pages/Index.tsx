@@ -801,8 +801,8 @@ export default function Index() {
                   key={`first-${index}`}
                   className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
                 >
-                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
-                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#E5D3B3]/10 hover:to-[#E5D3B3]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#E5D3B3] transition-colors">
                       {partner.name}
                     </span>
                   </div>
