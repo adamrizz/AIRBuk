@@ -298,11 +298,11 @@ export default function Index() {
               <div className="hidden md:flex items-center space-x-3">
                 <Button
                   variant="outline"
-                  className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
+                  className="border-[#E5D3B3] text-[#E5D3B3] hover:bg-[#E5D3B3] hover:text-white px-4 py-2 h-10"
                 >
                   Masuk
                 </Button>
-                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
+                <Button className="bg-[#E5D3B3] text-white hover:bg-[#E5D3B3]/90 px-4 py-2 h-10">
                   Daftar
                 </Button>
               </div>
