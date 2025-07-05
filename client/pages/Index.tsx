@@ -921,98 +921,180 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#664229] text-stone-300 py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Column 1: Brand and Social Media */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <BookOpen className="h-8 w-8 text-white" />
-                <span className="text-xl font-bold text-white">AirBook</span>
-              </div>
-              <p className="text-stone-300 text-sm">
-                Platform terpercaya untuk menemukan dan membeli buku berkualitas
-                dengan harga terjangkau.
-              </p>
-            </div>
+{/* Footer */}
+<footer className="bg-[#E5D3B3] text-black py-12">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+      {/* Column 1: Brand */}
+      <div className="space-y-4">
+        <div className="flex items-center space-x-2">
+          <BookOpen className="h-8 w-8 text-black" />
+          <span className="text-xl font-bold text-black">AirBook</span>
+        </div>
+        <p className="text-black text-sm">
+          Platform terpercaya untuk menemukan dan membeli buku berkualitas
+          dengan harga terjangkau.
+        </p>
+      </div>
 
-            {/* Column 2: Categories */}
-            <div>
-              <h3 className="font-bold text-white mb-4">Kategori</h3>
-              <ul className="space-y-2 text-sm text-stone-300">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Fiksi
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Non-Fiksi
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Bisnis
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Teknologi
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Sejarah
-                  </a>
-                </li>
-              </ul>
-            </div>
+      {/* Column 2: Contact */}
+      <div>
+        <h3 className="font-bold text-black mb-4">Kontak</h3>
+        <ul className="space-y-2 text-sm text-black">
+          <li>Email: info@airbook.id</li>
+          <li>Telepon: (021) 1234-5678</li>
+          <li>Alamat: Jakarta, Indonesia</li>
+        </ul>
+      </div>
 
-            {/* Column 3: Services */}
-            <div>
-              <h3 className="font-bold text-white mb-4">Layanan</h3>
-              <ul className="space-y-2 text-sm text-stone-300">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Bantuan
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Pembayaran
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Pengiriman
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Pengembalian
-                  </a>
-                </li>
-              </ul>
-            </div>
+      {/* Column 3: Categories */}
+      <div>
+        <h3 className="font-bold text-black mb-4">Kategori</h3>
+        <ul className="space-y-2 text-sm text-black">
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Fiksi
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Non-Fiksi
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Bisnis
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Teknologi
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Sejarah
+            </a>
+          </li>
+        </ul>
+      </div>
 
-            {/* Column 4: Contact */}
-            <div>
-              <h3 className="font-bold text-white mb-4">Kontak</h3>
-              <ul className="space-y-2 text-sm text-stone-300">
-                <li>Email: info@airbook.id</li>
-                <li>Telepon: (021) 1234-5678</li>
-                <li>Alamat: Jakarta, Indonesia</li>
-              </ul>
-            </div>
+      {/* Column 4: Payment & Shipping Logos */}
+      <div>
+        <h3 className="font-bold text-black mb-4">Metode Pembayaran</h3>
+        <div className="grid grid-cols-2 gap-2 mb-4">
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/BCA-Logo.png" 
+              alt="BCA" 
+              className="h-4 object-contain"
+            />
           </div>
-          <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-stone-400">
-            <p>
-              &copy; {new Date().getFullYear()} AirBook. All rights reserved.
-            </p>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/Mandiri-Logo.png" 
+              alt="Mandiri" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/BNI-Logo.png" 
+              alt="BNI" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/Permata-Bank-Logo.png" 
+              alt="Permata" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/QRIS-Logo.png" 
+              alt="QRIS" 
+              className="h-4 object-contain"
+            />
           </div>
         </div>
-      </footer>
+        
+        <h4 className="font-bold text-black mb-2">Kurir Pengiriman</h4>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/JNE-Logo.png" 
+              alt="JNE" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/J&T-Express-Logo.png" 
+              alt="J&T Express" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/SiCepat-Logo.png" 
+              alt="SiCepat" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/GoSend-Logo.png" 
+              alt="GoSend" 
+              className="h-4 object-contain"
+            />
+          </div>
+          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+            <img 
+              src="https://logos-world.net/wp-content/uploads/2020/09/GrabExpress-Logo.png" 
+              alt="GrabExpress" 
+              className="h-4 object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Column 5: Services */}
+      <div>
+        <h3 className="font-bold text-black mb-4">Layanan</h3>
+        <ul className="space-y-2 text-sm text-black">
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Bantuan
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Pembayaran
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Pengiriman
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Pengembalian
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div className="border-t border-black/20 mt-12 pt-8 text-center text-sm text-black">
+      <p>
+        &copy; {new Date().getFullYear()} AirBook. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
