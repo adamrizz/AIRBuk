@@ -335,7 +335,7 @@ export default function Index() {
                 hanya dengan beberapa klik.
               </p>
               <div className="pt-4">
-                <button className="bg-[#E5D3B3] text-black font-bold py-3 px-8 rounded-lg hover:bg-[#E5D3B3]/90 transition-all duration-300 shadow-lg">
+                <button className="bg-[#E5D3B3] text-stone-800 font-bold py-3 px-8 rounded-lg hover:bg-[#E5D3B3]/90 transition-all duration-300 shadow-lg">
                   Mulai Berbelanja
                 </button>
               </div>
