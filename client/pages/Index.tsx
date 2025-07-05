@@ -633,7 +633,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fa66a1fd0a10a4f87b0a512bfa2b6dfb5?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fa61e589d3ba24ba697909a651f5e3918"
                 alt="P.G Turner's Bookstore illustration"
                 className="max-w-full h-auto"
               />
