@@ -535,11 +535,7 @@ export default function Index() {
                   alt="Glossy Gentleman Guide"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-<<<<<<< HEAD
                 <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-=======
-                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
->>>>>>> origin/main
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
