@@ -258,7 +258,7 @@ export default function Index() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/airbook_logo.png"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Ff0809dd8a6564679b6f4a196ba66ad79"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -298,11 +298,11 @@ export default function Index() {
               <div className="hidden md:flex items-center space-x-3">
                 <Button
                   variant="outline"
-                  className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
+                  className="border-[#E5D3B3] text-[#E5D3B3] hover:bg-[#E5D3B3] hover:text-black px-4 py-2 h-10"
                 >
                   Masuk
                 </Button>
-                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
+                <Button className="bg-[#E5D3B3] text-stone-800 hover:bg-[#E5D3B3]/90 px-4 py-2 h-10">
                   Daftar
                 </Button>
               </div>
@@ -335,7 +335,7 @@ export default function Index() {
                 hanya dengan beberapa klik.
               </p>
               <div className="pt-4">
-                <button className="bg-[#664229] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#664229]/90 transition-all duration-300 shadow-lg">
+                <button className="bg-[#E5D3B3] text-stone-800 font-bold py-3 px-8 rounded-lg hover:bg-[#E5D3B3]/90 transition-all duration-300 shadow-lg">
                   Mulai Berbelanja
                 </button>
               </div>
@@ -359,7 +359,7 @@ export default function Index() {
         </div>
       </section>
 
-{/* Book Showcase Section */}
+      {/* Book Showcase Section */}
       <section
         ref={bookSectionRef}
         className="py-16 bg-gray-50 overflow-hidden"
@@ -368,7 +368,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Book Grid with Staggered Animation */}
             <div
-              className={`grid grid-cols-2 gap-2 max-w-xs mx-auto transition-all duration-1000 ease-out ${
+              className={`grid grid-cols-2 gap-3 max-w-md transition-all duration-1000 ease-out ${
                 isBookSectionVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-12"
@@ -528,14 +528,14 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
             {/* Book 1 - Using uploaded image */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#E5D3B3]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2F2c9129c76d2247e29562c4a879f0f215?format=webp&width=800"
                   alt="Glossy Gentleman Guide"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
@@ -544,83 +544,83 @@ export default function Index() {
                 <p className="text-xs text-gray-600">
                   Jet Widodo, Adi Sapoetro, Leo Sirthuas
                 </p>
-                <p className="text-sm font-bold text-[#664229]">Rp 125,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 125,000</p>
               </div>
             </div>
 
             {/* Book 2 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#E5D3B3]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
                   alt="Start With Why"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Start With Why
                 </h3>
                 <p className="text-xs text-gray-600">Simon Sinek</p>
-                <p className="text-sm font-bold text-[#664229]">Rp 95,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 95,000</p>
               </div>
             </div>
 
             {/* Book 3 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#E5D3B3]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
                   alt="Sapiens Grafis vol.2"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Sapiens Grafis vol.2
                 </h3>
                 <p className="text-xs text-gray-600">Yuval Noah Harari</p>
-                <p className="text-sm font-bold text-[#664229]">Rp 150,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 150,000</p>
               </div>
             </div>
 
             {/* Book 4 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#E5D3B3]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                   alt="Laut Bercerita"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
-                <p className="text-sm font-bold text-[#664229]">Rp 85,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 85,000</p>
               </div>
             </div>
 
             {/* Book 5 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#E5D3B3]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
                   alt="Kamu Gak Sendiri"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Kamu Gak Sendiri
                 </h3>
                 <p className="text-xs text-gray-600">Syahid Muhammad</p>
-                <p className="text-sm font-bold text-[#664229]">Rp 75,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 75,000</p>
               </div>
             </div>
           </div>
@@ -633,7 +633,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fa66a1fd0a10a4f87b0a512bfa2b6dfb5?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fa61e589d3ba24ba697909a651f5e3918"
                 alt="P.G Turner's Bookstore illustration"
                 className="max-w-full h-auto"
               />
@@ -656,7 +656,7 @@ export default function Index() {
                 menjelajahi keajaiban cerita, dan memperluas wawasan melalui
                 buku-buku yang tentara.
               </p>
-              <Button className="bg-[#664229] hover:bg-[#664229]/90 text-white px-6 py-2 rounded-md">
+              <Button className="bg-[#E5D3B3] hover:bg-[#E5D3B3]/90 text-stone-900 px-6 py-2 rounded-md">
                 Pelajari Lebih Lanjut
               </Button>
             </div>
@@ -801,8 +801,8 @@ export default function Index() {
                   key={`first-${index}`}
                   className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
                 >
-                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
-                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#E5D3B3]/10 hover:to-[#E5D3B3]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#E5D3B3] transition-colors">
                       {partner.name}
                     </span>
                   </div>
@@ -814,8 +814,8 @@ export default function Index() {
                   key={`second-${index}`}
                   className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
                 >
-                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
-                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#E5D3B3]/10 hover:to-[#E5D3B3]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#E5D3B3] transition-colors">
                       {partner.name}
                     </span>
                   </div>
@@ -854,7 +854,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Yusno Kami Percayakan Ketika Berbagia di Toko Kami
+              Yang Kamu Dapatkan Ketika Berbelanja di Toko Kami
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -921,180 +921,213 @@ export default function Index() {
         </div>
       </section>
 
-{/* Footer */}
-<footer className="bg-[#E5D3B3] text-black py-12">
-  <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-      {/* Column 1: Brand */}
-      <div className="space-y-4">
-        <div className="flex items-center space-x-2">
-          <BookOpen className="h-8 w-8 text-black" />
-          <span className="text-xl font-bold text-black">AirBook</span>
+      {/* Footer */}
+      <footer className="bg-[#E5D3B3] text-black py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+            {/* Column 1: Brand */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <BookOpen className="h-8 w-8 text-stone-700" />
+                <span className="text-xl font-bold text-stone-700">
+                  AirBook
+                </span>
+              </div>
+              <p className="text-stone-600 text-sm">
+                Platform terpercaya untuk menemukan dan membeli buku berkualitas
+                dengan harga terjangkau.
+              </p>
+            </div>
+
+            {/* Column 2: Contact */}
+            <div>
+              <h3 className="font-bold text-stone-800 mb-4">Kontak</h3>
+              <ul className="space-y-2 text-sm text-stone-800">
+                <li>Email: info@airbook.id</li>
+                <li>Telepon: (021) 1234-5678</li>
+                <li>Alamat: Jakarta, Indonesia</li>
+              </ul>
+            </div>
+
+            {/* Column 3: Categories */}
+            <div>
+              <h3 className="font-bold text-stone-700 mb-4">Kategori</h3>
+              <ul className="space-y-2 text-sm text-stone-700">
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Fiksi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Non-Fiksi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Bisnis
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Teknologi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Sejarah
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4: Payment & Shipping Logos */}
+            <div>
+              <h3 className="font-bold text-stone-700 mb-4">
+                Metode Pembayaran
+              </h3>
+              <div className="grid grid-cols-2 gap-2 mb-4">
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/BCA-Logo.png"
+                    alt="BCA"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/Mandiri-Logo.png"
+                    alt="Mandiri"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/BNI-Logo.png"
+                    alt="BNI"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/Permata-Bank-Logo.png"
+                    alt="Permata"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/QRIS-Logo.png"
+                    alt="QRIS"
+                    className="h-4 object-contain"
+                  />
+                </div>
+              </div>
+
+              <h4 className="font-bold text-stone-700 mb-2">
+                Kurir Pengiriman
+              </h4>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/JNE-Logo.png"
+                    alt="JNE"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/J&T-Express-Logo.png"
+                    alt="J&T Express"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/SiCepat-Logo.png"
+                    alt="SiCepat"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/GoSend-Logo.png"
+                    alt="GoSend"
+                    className="h-4 object-contain"
+                  />
+                </div>
+                <div className="bg-white p-1 rounded flex items-center justify-center h-8">
+                  <img
+                    src="https://logos-world.net/wp-content/uploads/2020/09/GrabExpress-Logo.png"
+                    alt="GrabExpress"
+                    className="h-4 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Column 5: Services */}
+            <div>
+              <h3 className="font-bold text-stone-700 mb-4">Layanan</h3>
+              <ul className="space-y-2 text-sm text-stone-700">
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Bantuan
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Pembayaran
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Pengiriman
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
+                    Pengembalian
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-stone-800/20 mt-12 pt-8 text-center text-sm text-stone-800">
+            <p>
+              &copy; {new Date().getFullYear()} AirBook. All rights reserved.
+            </p>
+          </div>
         </div>
-        <p className="text-black text-sm">
-          Platform terpercaya untuk menemukan dan membeli buku berkualitas
-          dengan harga terjangkau.
-        </p>
-      </div>
-
-      {/* Column 2: Contact */}
-      <div>
-        <h3 className="font-bold text-black mb-4">Kontak</h3>
-        <ul className="space-y-2 text-sm text-black">
-          <li>Email: info@airbook.id</li>
-          <li>Telepon: (021) 1234-5678</li>
-          <li>Alamat: Jakarta, Indonesia</li>
-        </ul>
-      </div>
-
-      {/* Column 3: Categories */}
-      <div>
-        <h3 className="font-bold text-black mb-4">Kategori</h3>
-        <ul className="space-y-2 text-sm text-black">
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Fiksi
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Non-Fiksi
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Bisnis
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Teknologi
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Sejarah
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Column 4: Payment & Shipping Logos */}
-      <div>
-        <h3 className="font-bold text-black mb-4">Metode Pembayaran</h3>
-        <div className="grid grid-cols-2 gap-2 mb-4">
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/BCA-Logo.png" 
-              alt="BCA" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/Mandiri-Logo.png" 
-              alt="Mandiri" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/BNI-Logo.png" 
-              alt="BNI" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/Permata-Bank-Logo.png" 
-              alt="Permata" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/QRIS-Logo.png" 
-              alt="QRIS" 
-              className="h-4 object-contain"
-            />
-          </div>
-        </div>
-        
-        <h4 className="font-bold text-black mb-2">Kurir Pengiriman</h4>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/JNE-Logo.png" 
-              alt="JNE" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/J&T-Express-Logo.png" 
-              alt="J&T Express" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/SiCepat-Logo.png" 
-              alt="SiCepat" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/GoSend-Logo.png" 
-              alt="GoSend" 
-              className="h-4 object-contain"
-            />
-          </div>
-          <div className="bg-white p-1 rounded flex items-center justify-center h-8">
-            <img 
-              src="https://logos-world.net/wp-content/uploads/2020/09/GrabExpress-Logo.png" 
-              alt="GrabExpress" 
-              className="h-4 object-contain"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Column 5: Services */}
-      <div>
-        <h3 className="font-bold text-black mb-4">Layanan</h3>
-        <ul className="space-y-2 text-sm text-black">
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Bantuan
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Pembayaran
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Pengiriman
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-gray-600 transition-colors">
-              Pengembalian
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <div className="border-t border-black/20 mt-12 pt-8 text-center text-sm text-black">
-      <p>
-        &copy; {new Date().getFullYear()} AirBook. All rights reserved.
-      </p>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   );
 }
