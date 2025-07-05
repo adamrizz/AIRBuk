@@ -582,11 +582,7 @@ export default function Index() {
                   Sapiens Grafis vol.2
                 </h3>
                 <p className="text-xs text-gray-600">Yuval Noah Harari</p>
-<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 150,000</p>
-=======
-                <p className="text-sm font-bold text-[#000000]">Rp 150,000</p>
->>>>>>> origin/main
               </div>
             </div>
 
