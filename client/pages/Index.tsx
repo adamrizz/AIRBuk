@@ -928,10 +928,12 @@ export default function Index() {
             {/* Column 1: Brand and Social Media */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <BookOpen className="h-8 w-8 text-black" />
-                <span className="text-xl font-bold text-black">AirBook</span>
+                <BookOpen className="h-8 w-8 text-stone-700" />
+                <span className="text-xl font-bold text-stone-700">
+                  AirBook
+                </span>
               </div>
-              <p className="text-black text-sm">
+              <p className="text-stone-600 text-sm">
                 Platform terpercaya untuk menemukan dan membeli buku berkualitas
                 dengan harga terjangkau.
               </p>
