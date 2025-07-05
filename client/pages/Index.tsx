@@ -359,7 +359,7 @@ export default function Index() {
         </div>
       </section>
 
-{/* Book Showcase Section */}
+      {/* Book Showcase Section */}
       <section
         ref={bookSectionRef}
         className="py-16 bg-gray-50 overflow-hidden"
@@ -368,11 +368,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Book Grid with Staggered Animation */}
             <div
-<<<<<<< HEAD
               className={`grid grid-cols-2 gap-3 max-w-md transition-all duration-1000 ease-out ${
-=======
-              className={`grid grid-cols-2 gap-2 max-w-xs mx-auto transition-all duration-1000 ease-out ${
->>>>>>> origin/main
                 isBookSectionVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-12"
