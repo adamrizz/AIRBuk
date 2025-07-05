@@ -368,7 +368,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Book Grid with Staggered Animation */}
             <div
-              className={`grid grid-cols-2 gap-4 transition-all duration-1000 ease-out ${
+              className={`grid grid-cols-2 gap-3 max-w-md transition-all duration-1000 ease-out ${
                 isBookSectionVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-12"
