@@ -601,11 +601,7 @@ export default function Index() {
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
-<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 85,000</p>
-=======
-                <p className="text-sm font-bold text-[#000000]">Rp 85,000</p>
->>>>>>> origin/main
               </div>
             </div>
 
