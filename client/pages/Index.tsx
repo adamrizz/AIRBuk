@@ -535,7 +535,11 @@ export default function Index() {
                   alt="Glossy Gentleman Guide"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+<<<<<<< HEAD
                 <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+=======
+                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+>>>>>>> origin/main
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
@@ -544,7 +548,11 @@ export default function Index() {
                 <p className="text-xs text-gray-600">
                   Jet Widodo, Adi Sapoetro, Leo Sirthuas
                 </p>
+<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 125,000</p>
+=======
+                <p className="text-sm font-bold text-[#00000]">Rp 125,000</p>
+>>>>>>> origin/main
               </div>
             </div>
 
@@ -556,14 +564,22 @@ export default function Index() {
                   alt="Start With Why"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+<<<<<<< HEAD
                 <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+=======
+                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+>>>>>>> origin/main
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Start With Why
                 </h3>
                 <p className="text-xs text-gray-600">Simon Sinek</p>
+<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 95,000</p>
+=======
+                <p className="text-sm font-bold text-[#000000]">Rp 95,000</p>
+>>>>>>> origin/main
               </div>
             </div>
 
@@ -575,14 +591,22 @@ export default function Index() {
                   alt="Sapiens Grafis vol.2"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+<<<<<<< HEAD
                 <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+=======
+                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+>>>>>>> origin/main
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Sapiens Grafis vol.2
                 </h3>
                 <p className="text-xs text-gray-600">Yuval Noah Harari</p>
+<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 150,000</p>
+=======
+                <p className="text-sm font-bold text-[#000000]">Rp 150,000</p>
+>>>>>>> origin/main
               </div>
             </div>
 
@@ -601,7 +625,11 @@ export default function Index() {
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
+<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 85,000</p>
+=======
+                <p className="text-sm font-bold text-[#000000]">Rp 85,000</p>
+>>>>>>> origin/main
               </div>
             </div>
 
@@ -620,7 +648,11 @@ export default function Index() {
                   Kamu Gak Sendiri
                 </h3>
                 <p className="text-xs text-gray-600">Syahid Muhammad</p>
+<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 75,000</p>
+=======
+                <p className="text-sm font-bold text-[#000000]">Rp 75,000</p>
+>>>>>>> origin/main
               </div>
             </div>
           </div>
