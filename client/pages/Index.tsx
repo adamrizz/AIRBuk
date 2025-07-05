@@ -724,7 +724,7 @@ export default function Index() {
                   onClick={() => setCurrentWeek(week.week)}
                   className={`px-6 py-2 rounded-md font-medium transition-colors ${
                     currentWeek === week.week
-                      ? "bg-[#E5D3B3] text-white"
+                      ? "bg-[#E5D3B3] text-black"
                       : "text-muted-foreground hover:text-[#E5D3B3]"
                   }`}
                 >
