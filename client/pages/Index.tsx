@@ -922,7 +922,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#664229] text-stone-300 py-12">
+      <footer className="bg-[#E5D3B3] text-stone-300 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Column 1: Brand and Social Media */}
