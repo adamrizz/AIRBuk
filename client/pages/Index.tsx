@@ -941,30 +941,45 @@ export default function Index() {
 
             {/* Column 2: Categories */}
             <div>
-              <h3 className="font-bold text-black mb-4">Kategori</h3>
-              <ul className="space-y-2 text-sm text-black">
+              <h3 className="font-bold text-stone-700 mb-4">Kategori</h3>
+              <ul className="space-y-2 text-sm text-stone-700">
                 <li>
-                  <a href="#" className="hover:text-gray-600 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
                     Fiksi
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-600 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
                     Non-Fiksi
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-600 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
                     Bisnis
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-600 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
                     Teknologi
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-gray-600 transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-stone-500 transition-colors"
+                  >
                     Sejarah
                   </a>
                 </li>
