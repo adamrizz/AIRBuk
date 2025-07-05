@@ -544,11 +544,7 @@ export default function Index() {
                 <p className="text-xs text-gray-600">
                   Jet Widodo, Adi Sapoetro, Leo Sirthuas
                 </p>
-<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 125,000</p>
-=======
-                <p className="text-sm font-bold text-[#00000]">Rp 125,000</p>
->>>>>>> origin/main
               </div>
             </div>
 
