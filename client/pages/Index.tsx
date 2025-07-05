@@ -302,7 +302,7 @@ export default function Index() {
                 >
                   Masuk
                 </Button>
-                <Button className="bg-[#E5D3B3] text-white hover:bg-[#E5D3B3]/90 px-4 py-2 h-10">
+                <Button className="bg-[#E5D3B3] text-black hover:bg-[#E5D3B3]/90 px-4 py-2 h-10">
                   Daftar
                 </Button>
               </div>
