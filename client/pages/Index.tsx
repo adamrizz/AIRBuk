@@ -359,7 +359,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Book Showcase Section */}
+{/* Book Showcase Section */}
       <section
         ref={bookSectionRef}
         className="py-16 bg-gray-50 overflow-hidden"
@@ -368,7 +368,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Book Grid with Staggered Animation */}
             <div
-              className={`grid grid-cols-2 gap-4 transition-all duration-1000 ease-out ${
+              className={`grid grid-cols-2 gap-2 max-w-xs mx-auto transition-all duration-1000 ease-out ${
                 isBookSectionVisible
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-12"
@@ -376,7 +376,7 @@ export default function Index() {
             >
               {/* Top row books */}
               <div
-                className={`space-y-4 transition-all duration-1000 ease-out ${
+                className={`space-y-3 transition-all duration-1000 ease-out ${
                   isBookSectionVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -384,7 +384,7 @@ export default function Index() {
                 style={{ transitionDelay: "200ms" }}
               >
                 <div
-                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                  className={`aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
                     isBookSectionVisible
                       ? "scale-100 rotate-0"
                       : "scale-95 -rotate-2"
@@ -398,7 +398,7 @@ export default function Index() {
                 </div>
               </div>
               <div
-                className={`space-y-4 transition-all duration-1000 ease-out ${
+                className={`space-y-3 transition-all duration-1000 ease-out ${
                   isBookSectionVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -406,7 +406,7 @@ export default function Index() {
                 style={{ transitionDelay: "400ms" }}
               >
                 <div
-                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                  className={`aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
                     isBookSectionVisible
                       ? "scale-100 rotate-0"
                       : "scale-95 rotate-2"
@@ -422,7 +422,7 @@ export default function Index() {
 
               {/* Bottom row books */}
               <div
-                className={`space-y-4 transition-all duration-1000 ease-out ${
+                className={`space-y-3 transition-all duration-1000 ease-out ${
                   isBookSectionVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -430,7 +430,7 @@ export default function Index() {
                 style={{ transitionDelay: "600ms" }}
               >
                 <div
-                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                  className={`aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
                     isBookSectionVisible
                       ? "scale-100 rotate-0"
                       : "scale-95 rotate-2"
@@ -444,7 +444,7 @@ export default function Index() {
                 </div>
               </div>
               <div
-                className={`space-y-4 transition-all duration-1000 ease-out ${
+                className={`space-y-3 transition-all duration-1000 ease-out ${
                   isBookSectionVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -452,7 +452,7 @@ export default function Index() {
                 style={{ transitionDelay: "800ms" }}
               >
                 <div
-                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                  className={`aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
                     isBookSectionVisible
                       ? "scale-100 rotate-0"
                       : "scale-95 -rotate-2"
