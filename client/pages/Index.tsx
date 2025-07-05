@@ -854,7 +854,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Yusno Kami Percayakan Ketika Berbagia di Toko Kami
+              Yang Kamu Dapatkan Ketika Berbelanja di Toko Kami
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
