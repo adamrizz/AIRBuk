@@ -766,7 +766,7 @@ export default function Index() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white"
+                          className="border-[#E5D3B3] text-[#E5D3B3] hover:bg-[#E5D3B3] hover:text-white"
                         >
                           Pelajari Lebih Lanjut
                         </Button>
