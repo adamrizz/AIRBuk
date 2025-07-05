@@ -430,7 +430,7 @@ export default function Index() {
                 style={{ transitionDelay: "600ms" }}
               >
                 <div
-                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                  className={`aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
                     isBookSectionVisible
                       ? "scale-100 rotate-0"
                       : "scale-95 rotate-2"
