@@ -656,7 +656,7 @@ export default function Index() {
                 menjelajahi keajaiban cerita, dan memperluas wawasan melalui
                 buku-buku yang tentara.
               </p>
-              <Button className="bg-[#E5D3B3] hover:bg-[#E5D3B3]/90 text-black px-6 py-2 rounded-md">
+              <Button className="bg-[#E5D3B3] hover:bg-[#E5D3B3]/90 text-stone-900 px-6 py-2 rounded-md">
                 Pelajari Lebih Lanjut
               </Button>
             </div>
