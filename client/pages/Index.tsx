@@ -563,11 +563,7 @@ export default function Index() {
                   Start With Why
                 </h3>
                 <p className="text-xs text-gray-600">Simon Sinek</p>
-<<<<<<< HEAD
                 <p className="text-sm font-bold text-[#E5D3B3]">Rp 95,000</p>
-=======
-                <p className="text-sm font-bold text-[#000000]">Rp 95,000</p>
->>>>>>> origin/main
               </div>
             </div>
 
