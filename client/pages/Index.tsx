@@ -298,7 +298,7 @@ export default function Index() {
               <div className="hidden md:flex items-center space-x-3">
                 <Button
                   variant="outline"
-                  className="border-[#E5D3B3] text-[#E5D3B3] hover:bg-[#E5D3B3] hover:text-white px-4 py-2 h-10"
+                  className="border-[#E5D3B3] text-[#E5D3B3] hover:bg-[#E5D3B3] hover:text-black px-4 py-2 h-10"
                 >
                   Masuk
                 </Button>
