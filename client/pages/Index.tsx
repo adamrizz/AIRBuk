@@ -1035,7 +1035,7 @@ export default function Index() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-black/20 mt-12 pt-8 text-center text-sm text-black">
+          <div className="border-t border-stone-800/20 mt-12 pt-8 text-center text-sm text-stone-800">
             <p>
               &copy; {new Date().getFullYear()} AirBook. All rights reserved.
             </p>
