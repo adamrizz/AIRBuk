@@ -535,7 +535,7 @@ export default function Index() {
                   alt="Glossy Gentleman Guide"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
@@ -544,7 +544,7 @@ export default function Index() {
                 <p className="text-xs text-gray-600">
                   Jet Widodo, Adi Sapoetro, Leo Sirthuas
                 </p>
-                <p className="text-sm font-bold text-[#00000]">Rp 125,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 125,000</p>
               </div>
             </div>
 
@@ -556,14 +556,14 @@ export default function Index() {
                   alt="Start With Why"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Start With Why
                 </h3>
                 <p className="text-xs text-gray-600">Simon Sinek</p>
-                <p className="text-sm font-bold text-[#000000]">Rp 95,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 95,000</p>
               </div>
             </div>
 
@@ -575,14 +575,14 @@ export default function Index() {
                   alt="Sapiens Grafis vol.2"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-[#000000]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-[#E5D3B3]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Sapiens Grafis vol.2
                 </h3>
                 <p className="text-xs text-gray-600">Yuval Noah Harari</p>
-                <p className="text-sm font-bold text-[#000000]">Rp 150,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 150,000</p>
               </div>
             </div>
 
@@ -601,7 +601,7 @@ export default function Index() {
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
-                <p className="text-sm font-bold text-[#000000]">Rp 85,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 85,000</p>
               </div>
             </div>
 
@@ -620,7 +620,7 @@ export default function Index() {
                   Kamu Gak Sendiri
                 </h3>
                 <p className="text-xs text-gray-600">Syahid Muhammad</p>
-                <p className="text-sm font-bold text-[#000000]">Rp 75,000</p>
+                <p className="text-sm font-bold text-[#E5D3B3]">Rp 75,000</p>
               </div>
             </div>
           </div>
@@ -724,8 +724,8 @@ export default function Index() {
                   onClick={() => setCurrentWeek(week.week)}
                   className={`px-6 py-2 rounded-md font-medium transition-colors ${
                     currentWeek === week.week
-                      ? "bg-[#664229] text-white"
-                      : "text-muted-foreground hover:text-[#664229]"
+                      ? "bg-[#E5D3B3] text-stone-900"
+                      : "text-muted-foreground hover:text-[#E5D3B3]"
                   }`}
                 >
                   WEEK {week.week}
@@ -766,7 +766,7 @@ export default function Index() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white"
+                          className="border-[#E5D3B3] text-[#E5D3B3] hover:bg-[#E5D3B3] hover:text-black"
                         >
                           Pelajari Lebih Lanjut
                         </Button>
